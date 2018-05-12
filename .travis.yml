@@ -7,6 +7,6 @@ script:
 
 jobs:
   include:
-    - stage: pre-commit tests
-      script:
-      - pre-commit run --all-files
+  - stage: pre-commit tests
+    script:
+    - pre-commit run --all-files
