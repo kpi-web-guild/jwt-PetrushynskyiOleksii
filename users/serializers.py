@@ -12,7 +12,8 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         """Meta settings."""
 
         model = User
-        fields = ('username', 'email',)
+        fields = ('username', 'email', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
         """Create user by validated data."""
