@@ -45,7 +45,7 @@ class CreateUserView(CreateAPIView):
 class LoginUserView(APIView):
     """Log in user API view."""
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request, *args):
         """Log in user and return token."""
         data = request.data
         username = data.get('username')
